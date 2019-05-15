@@ -1,0 +1,24 @@
+<view wx:if="{{list}}" class="container">
+  <view class="card">
+    <view class="card-block padding-t-lg padding-b-lg">
+      <view class="search">
+        <icon type="search" size="16" color="#999999" />
+        <input
+          class="search-input h2"
+          placeholder="搜索"
+          bindtap="handleClickSearch"
+          disabled
+        />
+      </view>
+    </view>
+  </view>
+
+  <BusinessCard
+    wx:for="{{list}}"
+    wx:key="openid"
+    data="{{item}}"
+    data-id="{{item.openid}}"
+    bindtap="handleClickCard"
+  />
+</view>
+<Loading wx:else isFixed />

@@ -1,0 +1,18 @@
+<view class="card-block padding-t-sm padding-b-sm{{border ? ' border-b' : ''}}">
+  <view class="field">
+    <label class="field-label">公司名称：</label>
+    <view class="field-content">{{data.company}}</view>
+  </view>
+  <view class="field">
+    <label class="field-label">职业名称：</label>
+    <view class="field-content">
+      <text>{{data.job}}</text>
+    </view>
+  </view>
+  <view wx:if="{{data.start_year || data.end_year}}" class="field">
+    <label class="field-label">入职／离职：</label>
+    <view class="field-content">
+      {{data.start_year || '未填写'}}／{{data.end_year || '未填写'}}
+    </view>
+  </view>
+</view>

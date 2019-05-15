@@ -1,0 +1,71 @@
+<template name="workEdit">
+  <view class="card">
+    <view class="card-header">
+      <view class="card-title">工作经历</view>
+    </view>
+    <view class="card-block">
+      <view class="field">
+        <label class="field-label"><text class="text-error">*</text>公司名称：</label>
+        <view class="field-content">
+          <input
+            placeholder="请输入公司名称"
+            value="{{work.company}}"
+            data-name="work.company"
+            bindinput="handleInputChange"
+          />
+        </view>
+      </view>
+      <view class="field">
+        <label class="field-label"><text class="text-error">*</text>职位名称：</label>
+        <view class="field-content">
+          <input
+            placeholder="请输入职位名称"
+            value="{{work.job}}"
+            data-name="work.job"
+            bindinput="handleInputChange"
+          />
+        </view>
+      </view>
+      <view class="field">
+        <label class="field-label">入职时间：</label>
+        <view class="field-content">
+          <picker
+            class="flex-item"
+            mode="date"
+            fields="year"
+            value="{{work.start_year}}"
+            data-name="work.start_year"
+            bindchange="handleInputChange"
+          >
+            <input
+              placeholder="请选择入职时间"
+              value="{{work.start_year}}"
+              disabled
+            />
+          </picker>
+          <icon class="icon-arrow-up" />
+        </view>
+      </view>
+      <view class="field">
+        <label class="field-label">离职时间：</label>
+        <view class="field-content">
+          <picker
+            class="flex-item"
+            mode="date"
+            fields="year"
+            value="{{work.end_year}}"
+            data-name="work.end_year"
+            bindchange="handleInputChange"
+          >
+            <input
+              placeholder="请选择离职时间"
+              value="{{work.end_year}}"
+              disabled
+            />
+          </picker>
+          <icon class="icon-arrow-up" />
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,32 @@
+<import src="../../templates/basicEdit.wxml" />
+<import src="../../templates/educationEdit.wxml" />
+<import src="../../templates/workEdit.wxml" />
+<view class="container{{type !== 'basic' ? ' padding-t-md' : ''}}">
+  <template
+    wx:if="{{type === 'basic'}}"
+    is="basicEdit"
+    data="{{ genderSelect, basic }}"
+  />
+  <template
+    wx:if="{{type === 'education'}}"
+    is="educationEdit"
+    data="{{ degreeSelect, education }}"
+  />
+  <template
+    wx:if="{{type === 'work'}}"
+    is="workEdit"
+    data="{{work}}"
+  />
+  <view class="fix-bottom padding-md border-t flex">
+    <button
+      wx:if="{{id}}"
+      class="flex-item margin-r-md"
+      type="primary"
+      bindtap="handleRemove"
+      plain
+    >
+      删除
+    </button>
+    <button class="flex-item" type="primary" bindtap="handleSave">保存</button>
+  </view>
+</view>

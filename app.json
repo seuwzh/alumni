@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/friend/friend",
+    "pages/mine/mine",
+    "pages/search/search",
+    "pages/searchList/searchList",
+    "pages/edit/edit",
+    "pages/complete/complete",
+    "pages/detail/detail",
+    "pages/notice/notice",
+    "pages/share/share",
+    "pages/about/about",
+    "pages/check/check"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "SEU校友圈",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#CACACA",
+    "selectedColor": "#2180E8",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/friend/friend",
+        "iconPath": "images/home-normal.png",
+        "selectedIconPath": "images/home-selected.png",
+        "text": "Friend"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/friend-normal.png",
+        "selectedIconPath": "images/friend-selected.png",
+        "text": "Circle"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/mine-normal.png",
+        "selectedIconPath": "images/mine-selected.png",
+        "text": "Mine"
+      }
+    ]
+  }
+}
